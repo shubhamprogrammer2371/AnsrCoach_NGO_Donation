@@ -1,0 +1,862 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/********************************* Universal CSS Code Starts ***********************************/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all .2s linear;
+	list-style: none;
+}
+
+/********************************* Universal CSS Code Ends ***********************************/
+
+/*********************************** CSS Custom Variables Starts ************************************/
+
+:root{
+	--green: #27ae60;
+	--dark-color: #219150;
+	--black: #444;
+	--light-color: #666;
+	--border: .1rem solid rgba(0,0,0,0.1);
+	--border-hover: .1rem solid var(--black);
+	--about: rgba(0, 0, 0, 0.1);
+	--about-section: black;
+}
+
+/*********************************** CSS Custom Variables Ends ************************************/
+
+/*********************************** Default CSS Code Starts ************************************/
+
+html{
+	font-family: 'Poppins', sans-serif;
+	font-size: 62.5%;
+	text-transform: capitalize;
+	border: none;
+	outline: none;
+	scroll-behavior: smooth;
+}
+.heading{
+	text-align: center;
+	margin-bottom: 2rem;
+	position: relative;
+}
+.heading::before{
+	content: '';
+	position: absolute;
+	top:50%; left:0;
+	transform: translateY(-50%);
+	width: 100%;
+	height:.01rem;
+	background: rgba(0,0,0,.1);
+	z-index: -1;
+}
+.heading span{
+	font-size: 3rem;
+	padding:.5rem 2rem;
+	color:var(--black);
+	background: #fff;
+	border:var(--border);
+}
+.heading span:hover{
+	border: var(--border-hover);
+}
+.offset:before{
+	content: '';
+	display: block;
+	height: 11rem;
+	margin-top: -11rem;
+}
+.offset_2:before{
+	content: '';
+	display: block;
+	height: 9rem;
+	margin-top: -9rem;
+}
+
+/*********************************** Default CSS Code Ends ************************************/
+
+/*********************************** Navbar Section CSS Code Starts ************************************/
+
+.navbar{
+	width: 100%;
+	height: 9rem;
+	background:rgba(0, 0, 0,0.5);
+	color: #fff;
+}
+.navbar img{
+	height: 12rem;
+	width: 20rem;
+}
+.navbar h1{
+	font-size: 4rem;
+}
+.navbar h1:hover{
+	text-shadow: .2rem .2rem 1rem #fff;
+	cursor: pointer;
+}
+.navbar .links ul li{
+	padding: 1rem;
+	font-size: 1.5rem;
+}
+.navbar .links ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navbar .links ul li a{
+	color: #fff;
+	font-weight: 700;
+}
+.navbar .links ul li a:hover{
+	color: var(--green);
+	border-bottom: .2rem solid var(--green);
+}
+
+/*********************************** Navbar Section CSS Code Ends ************************************/
+
+/*********************************** Bottom Navbar Section CSS Code Starts ************************************/
+
+.bottom-navbar{
+	background: var(--green);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	display: none;
+}
+.bottom-navbar a{
+	font-size: 2.5rem;
+	padding: 2rem;
+	color: #fff;
+	text-decoration: none;
+}
+.bottom-navbar a:hover{
+	background: var(--dark-color);
+}
+
+/*********************************** Bottom Navbar Section CSS Code Ends ************************************/
+
+/*********************************** Home Section CSS Code Starts ************************************/
+
+.home{
+	background: url('../images/home.jpg') no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	width: 100%;
+	height: 75rem;
+}
+.home .info{
+	color: lightgrey;
+	position: absolute;
+	top: 16rem;
+	left: 15rem;
+}
+.home .info h1{
+	font-size: 9.8rem;
+	word-spacing: .5rem;
+	padding-bottom: 1rem;
+}
+.home .info p{
+	font-size: 2.2rem;
+	font-weight: 600;
+	padding-bottom: 1rem;
+}
+.home .info a{
+	font-size: 2.5rem !important;
+	padding: 1rem 1.3rem;
+}
+
+/*********************************** Home Section CSS Code Ends ************************************/
+
+/*********************************** About Us Section CSS Code Starts ************************************/
+
+.about-section{
+	background-color: var(--about);
+	padding: 4rem;
+	width: 100%;
+	height: 50rem;
+	margin-bottom: 10rem;
+}
+.aboutimg img{
+	width: 70rem;
+	height: 42rem;
+}
+.aboutsection{
+	width: 50%;
+	height: 60rem;
+	font-size: 1.2rem;
+	color: var(--about-section);
+	word-spacing: .7rem;
+	overflow: hidden;
+}
+
+/*********************************** About Us Section CSS Code Ends ************************************/
+
+/*********************************** Gallery Section CSS Code Starts ************************************/
+
+.gallery{
+	width: 100%;
+	margin-bottom: 5rem;
+}
+.gallery .row img{
+	margin-top: 3rem;
+	border-radius: 1.5rem;
+}
+.gallery .row a:hover img{
+	cursor: zoom-in;
+	transform: scale(.9);
+	box-shadow: .9rem 1.1rem 2rem #000;
+}
+
+/*********************************** Gallery Section CSS Code Ends ************************************/
+
+/*********************************** Our Team Section CSS Code Starts ************************************/
+
+.team-section{
+	width: 100%;
+	height: 105rem;
+}
+.card{
+	width: 40rem;
+	height: 44.5rem;
+	overflow: hidden;
+	margin: 3rem 1rem 0;
+}
+.card:hover{
+	color: #fff;
+	background: #4e4a4a ;
+	border: var(--border-hover);
+}
+.card:hover a{
+	color: #fff;
+}
+.card-img-top{
+	width: 100%;
+	max-height: 22.4rem !important;
+	margin-bottom: 1rem;
+}
+.card:hover .card-img-top{
+	transform: scale(1.1);
+}
+.card-title{
+	font-size: 2.2rem;
+	padding-top: .3rem;
+	padding: 0 1rem;
+}
+.card-text{
+	font-size: 1.5rem;
+	padding-top: .2rem;
+	padding: 0 1rem;
+}
+.lead{
+	font-size: 1.2rem;
+	padding: 0 1rem;
+}
+.card-links{
+	padding-top: .5rem;
+	text-align: center;
+}
+.card-links a{
+	padding-right: 1rem;
+	color: #5b5b5b;
+}
+.card-links a:hover i{
+	transform: translateY(-.7rem);
+}
+
+/*********************************** Our Team Section CSS Code Ends ************************************/
+
+/*********************************** Our Clients Section CSS Code Starts ************************************/
+
+.client-section{
+	width: 100%;
+	height: 60rem;
+	padding: 8rem 0;
+	margin: 2rem 0;
+}
+.carousel-item{
+	padding: 0 10rem;
+}
+.carousel-control-prev{
+	position: absolute;
+	left: 0;
+}
+.box{
+	text-align: center;
+	border: .1rem soli rgba(0, 0, 0, 0.2);
+	box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, 0.3);
+	transition: .5s ease;
+	border-radius: .2rem;
+	height: 35rem;
+	margin: 2rem;
+}
+.box:hover{
+	background: #16c9f6;
+}
+.box:hover p{
+	color: white;
+}
+.carousel-indicators{
+	position: absolute;
+	right: 0;
+	bottom: -6rem;
+}
+.carousel-indicators button{
+	background: #16c9f6 !important;
+	height: 0 !important;
+	width: 2rem !important;
+	border-radius: 50%;
+}
+.box a{
+	position: relative;
+}
+.box a i{
+	font-size: 7rem;
+	color: #000;
+	margin: 4rem 0;
+}
+.box a img{
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	margin-top: 5rem;
+}
+.box h1{
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: #000;
+	margin-bottom: 1rem;
+}
+.box h2{
+	font-size: 1.3rem;
+	font-weight: 400;
+	color: #666666;
+	margin-bottom: 2rem!important;
+}
+
+/*********************************** Our Clients Section CSS Code Ends ************************************/
+
+/*********************************** Donate Section CSS Code Starts ************************************/
+
+.donate-section{
+	width: 100%;
+	height: 75rem;
+	padding: 5rem;
+	position: relative;
+}
+.donate-section:before{
+	content: "";
+	z-index: -1;
+	position: absolute;
+	left: 0%;
+	bottom: 0%;
+	right: 0%;
+	top: 0%;
+	background: linear-gradient(160deg,#16c9f6 55%,#fff 0%);
+}
+.donate-section img{
+	width: 100%;
+	height: 30rem;
+	border: var(--border);
+}
+.donate-section img:hover{
+	border: var(--border-hover);
+}
+.donate-section a{
+	font-size: 2rem;
+	padding: 1rem;
+	letter-spacing: .2rem;
+	font-weight: 700;
+	border-radius: .5rem;
+}
+.donate-section h3{
+	font-size: 2rem;
+	margin: 2rem 0;
+	color: #666;
+	padding: 0 .9rem !important;
+}
+.donate-section .headings h1{
+	font-size: 5rem;
+	margin-bottom: 2rem;
+}
+.donate-section .headings h1:hover{
+	text-shadow: .9rem .6rem .6rem #000;
+	transform: translateY(-.6rem);
+}
+.headings h2{
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+/*********************************** Donate Section CSS Code Ends ************************************/
+
+/*********************************** TermsandCondition Section CSS Code Starts ************************************/
+.tnc-form-container{
+	background: rgba(255,255,255,.9);
+	position: fixed;
+	top: 0;
+	right:-105%;
+	z-index: 10000;
+	height: 100%;
+	width: 100%;
+}
+.tnc-form-container.active{
+	left: 0;
+}
+.tnc-form-container form{
+	background: #fff;
+	border: var(--border);
+	width: 40rem;
+	padding: 2rem;
+	box-shadow: var(--box-shadow);
+	border-radius: .5rem;
+	margin: 2rem;
+}
+.tnc-form-container form .checkbox{
+	gap: .8rem;
+	padding: 1rem 0;
+	cursor: pointer;
+}
+.tnc-form-container form .checkbox label{
+	font-size: 1.5rem;
+	color: var(--light-color);
+	cursor: pointer;
+}
+.tnc-form-container form #paybtn{
+	width: 16rem;
+	margin: 1.3rem 0;
+	padding: 1rem 0;
+	font-size: 1rem;
+	letter-spacing: .2rem;
+	border-radius: .7rem;
+}
+.tnc-form-container #close-tnc-button{
+	position: absolute;
+	top: 1.5rem;
+	right: 2.5rem;
+	font-size: 5rem;
+	color: var(--black);
+	cursor: pointer;
+}
+.tnc-form-container textarea{
+	width: 90%;
+	height: 20rem;
+	resize: none;
+	border: var(--border);
+	padding: .5rem;
+}
+/*********************************** TermsandCondition Section CSS Code Ends ************************************/
+
+/*********************************** Contact Us Section CSS Code Starts ************************************/
+
+.contactus-section{
+	width: 100%;
+	height: 60rem;
+	padding: 8rem 0;
+	position: relative;
+	margin-bottom: 2rem;
+}
+.contactus-section:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(330deg,#16c9f6 55%,#000 0%);
+	z-index: -1;
+}
+.contactus-section .headings h1{
+	font-size: 5rem;
+	margin-bottom: 2rem;
+}
+.contactus-section .headings h1:hover{
+	transform: translateY(-1rem);
+}
+.form-group input{
+	width: 73rem;
+	height: 3.8rem;
+}
+.form-group textarea{
+	width: 73rem;
+	height: 11rem;
+	resize: none;
+}
+.form-button button{
+	border: .1rem solid #50d1c0;
+	border-radius: 10rem;
+	margin: 0 .5rem;
+	padding: 1.2rem 3.5rem;
+	outline: none;
+	color: #50d1c0;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.4;
+	text-align: center;
+	background: transparent;
+}
+form:hover .form-button button{
+	background: #fff;
+	color: #50d1c0;
+	box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.3);
+}
+
+/*********************************** Contact Us Section CSS Code Ends ************************************/
+
+/*********************************** Footer Section CSS Code Starts ************************************/
+
+footer{
+	width: 100%;
+	height: 45rem;
+	margin-top: 2rem;
+}
+footer h3{
+	font-size: 2.2rem;
+	color:var(--black);
+	padding:1rem 0;
+}
+footer a{
+	display: block;
+	font-size: 1.4rem;
+	color:var(--light-color);
+	padding:1rem 0;
+	text-decoration: none;
+}
+footer a i{
+	color:var(--green);
+	padding-right: .5rem;
+}
+footer .footer_navigation a:hover{
+	padding-right: 2rem;
+	color: var(--green);
+}
+footer .footer_navigation a:hover i{
+	padding-right: 2rem;
+}
+footer iframe{
+	width: 100%;
+	height: 30rem;
+	margin: 2rem 0;
+}
+footer iframe:hover{
+	border: var(--border-hover);
+}
+footer .social_links{
+	padding:1rem 0;
+	text-align: center;
+}
+footer .social_links a{
+	height: 4rem;
+	width: 4rem;
+	line-height: 5rem;
+	font-size: 2rem;
+	background:var(--green);
+	margin:0 .3rem;
+	border-radius: 50%; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer .social_links a i{
+	color: #fff;
+	padding-left: .4rem;
+}
+
+footer .social_links a:hover{
+	background:var(--black);
+}
+.email{
+	text-transform: none;
+}
+footer .author{
+	border-top: var(--border);
+	margin-top: 2rem;
+	padding:2.5rem 0; 
+	font-size: 2rem;
+	color:var(--light-color);
+	text-align: center;
+}
+footer .author span{
+	color:var(--green);
+}
+
+/*********************************** Footer Section CSS Code Ends ************************************/
+
+
+
+
+
+
+/******************************** Media Queries CSS Code Starts ****************************/
+
+@media (max-width: 1400px) {
+	.card{
+		width: 36rem;
+		height: 47rem;
+	}
+}
+
+@media (max-width: 1200px) {
+	.donate-section{
+		margin-bottom: 2rem;
+	}
+	.box{
+		height: 37rem;
+		width: 22rem;
+	}
+	.card{
+		width: 28rem;
+		height: 50rem;
+	}
+	.aboutsection p{
+		font-size: 1.1rem;
+	}
+	.navbar .links ul li{
+		font-size: 1.4rem;
+	}
+	.home .info{
+		top: 22rem;
+		left: 10rem;
+	}
+	.home .info h1{
+		font-size: 7rem;
+	}
+}
+
+@media(max-width: 991px){
+	html{
+		font-size: 47%;
+	}
+	.about-section{
+		height: 55rem;
+	}
+	.contactus-section{
+		height: 56rem;
+	}
+	.donate-section{
+		height: 76rem;
+	}
+	.navbar{
+		height: 11rem;
+	}
+	.navbar .navbar-brand{
+		margin-bottom: 4rem;
+		margin-right: 6rem;	
+	}
+	.navbar h1{
+		position: absolute;
+		top: 3rem;
+		right: 55%;
+	}
+	.navbar ul {
+		position: absolute;
+		right: 0;
+		top: 3rem;
+	}
+	.home{
+		height: 92rem;
+	}
+	.home .info h1{
+		font-size: 8rem;
+	}
+	.offset:before{
+		content: '';
+		display: block;
+		height: 13rem;
+		margin-top: -13rem;
+	}
+	.offset_2:before{
+		content: '';
+		display: block;
+		height: 10rem;
+		margin-top: -10rem;
+	}
+	footer{
+		height: 47rem;
+	}
+	footer .author{
+		margin-bottom: 5rem;
+	}
+}
+
+@media(max-width: 767px){
+	html{
+		font-size: 45%;
+	}
+	.links{
+		display: none;
+	}
+	.bottom-navbar{
+		display: block;
+	}
+	.offset_2:before{
+		content: '';
+		display: block;
+		height: 11rem;
+		margin-top: -11rem;
+	}
+	.navbar h1{
+		right: 7%;
+	}
+	.home{
+		height: 97rem;
+	}
+	.home .info{
+		top: 30rem;
+		left: 10rem;
+	}
+	.about-section{
+		height: 79rem;
+	}
+	.aboutimg img,.aboutsection{
+		width: 100%;
+		height: 36rem;
+		margin-bottom: 2rem;
+	}
+	.team-section{
+		height: 280rem;
+	}
+	.team-section .card{
+		margin-left: 6.5rem;
+		width: 61.5rem;
+		height: 43rem;
+	}
+	.client-section{
+		height: 130rem;
+	}
+	.client-section .box{
+		width: 50rem;
+		height: 30rem;
+	}
+	.donate-section{
+		height: 182rem;
+	}
+	.donate-section img{
+		margin-top: 1rem;
+		height: 40rem;
+		width: 100%;
+	}
+	.donate-section h3{
+		font-size: 2.5rem;
+	}
+	.donate-section a{
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-width: 576px) {
+	html{
+		font-size: 32%;
+	}
+	.offset:before{
+		content: '';
+		display: block;
+		height: 18rem;
+		margin-top: -18rem;
+	}
+	.offset_2:before{
+		content: '';
+		display: block;
+		height: 15rem;
+		margin-top: -15rem;
+	}
+	.navbar{
+		height: 15rem;
+	}
+	.navbar a{
+		padding-bottom: 10rem;
+	}
+	.home{
+		background-size: 100% 60%;
+		height: 70rem;
+	}
+	.home .info{
+		top: 26rem;
+	}
+	.about-section{
+		height: 74rem;
+	}
+	.team-section .team_card{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 2rem;
+	}
+	.team-section{
+		height: 290rem;
+	}
+	.client-section .client_box{
+		display: flex;
+		justify-content: center;
+		margin-left: 4rem;
+	}
+	.carousel-indicators button{
+		width: 3rem !important;
+	}
+	.footer_navigation{
+		padding-left: 5rem;
+	}
+	footer{
+		height: 111rem;
+	}
+
+}
+@media (max-width: 450px){
+	html{
+		font-size: 30%;
+	}
+	.navbar{
+		height: 7%;
+	}
+	.home .info{
+		top: 18rem;
+		left: 5rem;
+	}
+	.home .info h1{
+		font-size: 6rem;
+	}
+	.home .info p{
+		font-size: 2rem;
+	}
+	.home .info a{
+		font-size: 4rem;
+	}
+	.about-section{
+		height: 80rem;
+	}
+	footer{
+		height: 112rem;
+	}
+}
+@media (max-width: 320px){
+	html{
+		font-size: 25%;
+	}
+	.home{
+		background-size: 100% 40%;
+		height: 60rem;
+	}
+	.home .info{
+		left: 5rem;
+	}
+	.about-section{
+		height: 80rem;
+	}
+	.carousel-indicators button{
+		border-radius: 50%;
+		width: 2rem;
+	}
+	.donate-section{
+		height: 184rem;
+	}
+	footer{
+		height: 120rem;
+	}
+	footer .author{
+		margin-bottom: 0;
+	}
+}
+
+/******************************** Media Queries CSS Code Ends ****************************/
